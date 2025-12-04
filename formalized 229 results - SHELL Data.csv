@@ -1,0 +1,17 @@
+,Scaled RMSE,MAPE,Mean Directional Accuracy (MDA),R^2,Forecast Bias?,Overlay Plot (link),Misc. (good to know/have)
+Simple RNN Baseline,0.4226273298,6.340499878,0.5238095522,0.7916500568,Over-forecast (too high),SimpleRNNOverlay.png,
+Deep RNN (5 Layers),0.4266117513,6.190854073,0.5765306354,0.7877030373,Under-forecast (too low),DeepRNNOverlay.png,
+Simple GRU,0.4218470454,6.362511158,0.5017006993,0.7924187183,Over-forecast,SimpleGRUOverlay.png,
+Deep GRU (3 Layers),0.4201190174,5.813717842,0.5221088529,0.794115901,Under-forecast,DeepGRUOverlay.png,
+Simple LSTM,0.4236878753,6.328971863,0.537414968,0.7906031013,Over-forecast (too high),SimpleLSTMoverlay.png,
+Deep LSTM (3 Layers),0.4476367533,7.276226521,0.5408163071,0.766261816,Over-forecast (too high),DeepLSTMOverlay.png,
+,,,,,,,
+Open Source Transformer Model,,,,,,,
+Simple Multihead Attn,,,,,,,
+Open Source MLP,,,,,,,
+Open Source Model #4,,,,,,,
+Open Source Model #5,,,,,,,
+LSTMSeq2Seq,0.2859,7.73%,0.506,0.048,Over-forecast,LSTMSeq2SeqOverlay.png,Feature: Open  Scaled RMSE: 0.1296  MAPE: 1.50%  MDA: 0.541  R^2: 0.765  Mean error: 0.8630 -> Positive bias (over-forecast)  Feature: High  Scaled RMSE: 0.1238  MAPE: 1.44%  MDA: 0.495  R^2: 0.781  Mean error: 0.7829 -> Positive bias (over-forecast)  Feature: Low  Scaled RMSE: 0.1358  MAPE: 1.54%  MDA: 0.490  R^2: 0.749  Mean error: 0.8752 -> Positive bias (over-forecast)  Feature: Close  Scaled RMSE: 0.1276  MAPE: 1.46%  MDA: 0.480  R^2: 0.767  Mean error: 0.7907 -> Positive bias (over-forecast)  Feature: Adj Close  Scaled RMSE: 0.1291  MAPE: 1.69%  MDA: 0.378  R^2: 0.650  Mean error: -0.2219 -> Near-unbiased  Feature: Volume  Scaled RMSE: 1.0696  MAPE: 38.73%  MDA: 0.653  R^2: 0.048  Mean error: 299851.0312 -> Positive bias (over-forecast)
+AttentionLSTMSeq2Seq,0.3041229546,6.522828579,0.528109029,0.04728794,Under-forecast,AttentionSeq2SeqOverlay.png,Feature: Open  Scaled RMSE: 0.1462  MAPE: 1.78%  MDA: 0.561  R^2: 0.701  Mean error: -0.1867 -> Near-unbiased  Feature: High  Scaled RMSE: 0.1428  MAPE: 1.77%  MDA: 0.474  R^2: 0.709  Mean error: -0.2395 -> Near-unbiased  Feature: Low  Scaled RMSE: 0.1492  MAPE: 1.80%  MDA: 0.500  R^2: 0.698  Mean error: -0.1322 -> Near-unbiased  Feature: Close  Scaled RMSE: 0.1414  MAPE: 1.79%  MDA: 0.490  R^2: 0.714  Mean error: -0.2142 -> Near-unbiased  Feature: Adj Close  Scaled RMSE: 0.1749  MAPE: 2.32%  MDA: 0.500  R^2: 0.356  Mean error: -1.3490 -> Negative bias (under-forecast)  Feature: Volume  Scaled RMSE: 1.0702  MAPE: 29.68%  MDA: 0.643  R^2: 0.047  Mean error: -71540.0469 -> Negative bias (under-forecast)
+TransformerSeq2Seq,0.3636012971,8.092142105,0.5724020443,0.095721304,Over-forecast,TransformerSeq2SeqOverlay.png,Feature: Open  Scaled RMSE: 0.2459  MAPE: 3.04%  MDA: 0.541  R^2: 0.155  Mean error: 1.5291 -> Positive bias (over-forecast)  Feature: High  Scaled RMSE: 0.2497  MAPE: 3.01%  MDA: 0.557  R^2: 0.111  Mean error: 1.5456 -> Positive bias (over-forecast)  Feature: Low  Scaled RMSE: 0.2559  MAPE: 3.14%  MDA: 0.561  R^2: 0.110  Mean error: 1.6010 -> Positive bias (over-forecast)  Feature: Close  Scaled RMSE: 0.2390  MAPE: 2.90%  MDA: 0.571  R^2: 0.183  Mean error: 1.4168 -> Positive bias (over-forecast)  Feature: Adj Close  Scaled RMSE: 0.1485  MAPE: 2.04%  MDA: 0.561  R^2: 0.536  Mean error: 0.3526 -> Near-unbiased  Feature: Volume  Scaled RMSE: 1.0426  MAPE: 34.42%  MDA: 0.643  R^2: 0.096  Mean error: 92456.0391 -> Positive bias (over-forecast)
+Salesforce Morai Model,,,,,,,

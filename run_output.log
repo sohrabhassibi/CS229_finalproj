@@ -1,0 +1,73 @@
+======================================================================
+COMPREHENSIVE MODEL ANALYSIS
+======================================================================
+Device: cpu
+Training 30 epochs per model
+======================================================================
+
+[1/6] Loading data...
+✓ Train: (849, 30, 6), Test: (98, 30, 6)
+
+[2/6] Defining models...
+✓ All model classes defined
+
+[3/6] Creating datasets...
+✓ Datasets created
+
+[4/6] Running model analysis...
+This will take approximately 30-60 minutes...
+
+[5/6] Model 1/5: Simple Multihead Attn
+
+======================================================================
+ANALYZING: Simple Multihead Attn
+======================================================================
+Training Simple Multihead Attn...
+  Epoch 1/30, Train MSE: 0.4094
+  Epoch 10/30, Train MSE: 0.1709
+  Epoch 20/30, Train MSE: 0.1651
+  Epoch 30/30, Train MSE: 0.1630
+Evaluating Simple Multihead Attn...
+Generating plots for Simple Multihead Attn...
+Running explainability analysis for Simple Multihead Attn...
+
+Simple Multihead Attn Metrics:
+  Scaled RMSE: 0.461404
+  MAPE: 7.05%
+  MDA: 0.5884
+  R²: 0.7011
+  Forecast Bias: None / minimal
+
+[5/6] Model 2/5: Open Source MLP
+
+======================================================================
+ANALYZING: Open Source MLP
+======================================================================
+Training Open Source MLP...
+  Epoch 1/30, Train MSE: 0.6961
+  Epoch 10/30, Train MSE: 0.1597
+  Epoch 20/30, Train MSE: 0.1250
+  Epoch 30/30, Train MSE: 0.1080
+Evaluating Open Source MLP...
+Generating plots for Open Source MLP...
+Running explainability analysis for Open Source MLP...
+Traceback (most recent call last):
+  File "/Users/sohrabhassibi/Downloads/CS229_finalproj-main num2/run_all_models.py", line 509, in <module>
+    results_mlp = analyze_model(
+                  ^^^^^^^^^^^^^^
+  File "/Users/sohrabhassibi/Downloads/CS229_finalproj-main num2/run_all_models.py", line 469, in analyze_model
+    ablation_results, baseline_rmse = ablation_study(model, X_test, y_test, feature_cols)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sohrabhassibi/Downloads/CS229_finalproj-main num2/run_all_models.py", line 324, in ablation_study
+    pred = model(batch_x)
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sohrabhassibi/Downloads/CS229_finalproj-main num2/run_all_models.py", line 129, in forward
+    x_flat = x.view(B, -1)
+             ^^^^^^^^^^^^^
+RuntimeError: view size is not compatible with input tensor's size and stride (at least one dimension spans across two contiguous subspaces). Use .reshape(...) instead.
